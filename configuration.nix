@@ -25,6 +25,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  services.tailscale.enable = true;
+
   # Set your time zone.
   time.timeZone = "Europe/London";
 
@@ -86,12 +88,15 @@
   users.users.barry = {
     isNormalUser = true;
     description = "Barry Bridgens";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
       thunderbird
     ];
   };
+
+  # Docker
+  virtualisation.docker.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -108,6 +113,7 @@
   python3
   sbcl
   tmux
+  meld
   dropbox
   dropbox-cli
   obsidian
@@ -119,6 +125,7 @@
   bitwarden
   bitwarden-cli
   libreoffice-still-unwrapped
+  blanket
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
