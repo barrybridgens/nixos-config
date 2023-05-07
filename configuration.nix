@@ -119,6 +119,7 @@
   obsidian
   gnomeExtensions.dash-to-dock
   gnomeExtensions.appindicator
+  gnome3.gnome-tweaks
   git
   ranger
   htop
@@ -126,6 +127,7 @@
   bitwarden-cli
   libreoffice-still-unwrapped
   blanket
+  blender
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
