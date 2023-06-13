@@ -49,8 +49,24 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
+
+  # Enable i3
+  # services.xserver.displayManager.lightdm.enable = true;
+  # services.xserver.windowManager.i3.enable = true;
+  services.xserver.windowManager.i3.package = pkgs.i3-gaps;
+  services.xserver.windowManager.i3.enable = true;
+  services.xserver.desktopManager = {
+  				  xterm.enable = false;
+  				  xfce = {
+    				       enable = true;
+    				       noDesktop = true;
+    				       enableXfwm = false;
+  				  };
+				 };
+  # Enable trackpad
+  services.xserver.libinput.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -108,7 +124,7 @@
   #  wget
   vim
   emacs
-  fira-code
+  # fira-code
   gcc12
   python3
   sbcl
@@ -128,6 +144,19 @@
   libreoffice-still-unwrapped
   blanket
   blender
+  # for i3wm
+  kitty
+  feh
+  i3lock-fancy
+  dunst
+  polybar
+  dex
+  picom
+  rofi
+  ];
+
+  fonts.fonts = with pkgs; [
+    fira-code
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
