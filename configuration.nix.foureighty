@@ -115,12 +115,14 @@
   emacs
   emacsPackages.vterm
   emacs-all-the-icons-fonts
-  # fira-code
   gcc12
   python3
   sbcl
+  guile_3_0
+  racket
   tmux
   meld
+  vscode
   dropbox
   dropbox-cli
   obsidian
@@ -136,7 +138,12 @@
   blanket
   blender
   alacritty
+  kitty
+  neofetch
   cmake
+  thonny
+  tailscale
+  drawterm
   ];
 
   fonts.fonts = with pkgs; [
