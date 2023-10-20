@@ -115,11 +115,13 @@
   emacs
   emacsPackages.vterm
   emacs-all-the-icons-fonts
+  ispell
   gcc12
   python3
   sbcl
   guile_3_0
   racket
+  gnumake
   tmux
   meld
   vscode
@@ -134,16 +136,18 @@
   htop
   bitwarden
   bitwarden-cli
-  libreoffice-still-unwrapped
+  libreoffice-still
   blanket
   blender
   alacritty
   kitty
+  terminator
   neofetch
   cmake
   thonny
   tailscale
   drawterm
+  qemu_full
   ];
 
   fonts.fonts = with pkgs; [
