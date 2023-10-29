@@ -13,7 +13,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  # boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   networking.hostName = "yoga"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -24,6 +24,12 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+
+  networking.extraHosts =
+      ''
+        192.168.0.119 nas
+        192.168.0.125 pi4
+      '';
 
   services.tailscale.enable = true;
 
@@ -124,12 +130,21 @@
   #  wget
   vim
   emacs
-  # fira-code
+  emacsPackages.vterm
+  emacs-all-the-icons-fonts
+  ispell
   gcc12
   python3
+  thonny
   sbcl
+  guile_3_0
+  racket
+  gnumake
   tmux
   meld
+  libvterm-neovim
+  cmake
+  vscode
   dropbox
   dropbox-cli
   obsidian
@@ -141,7 +156,7 @@
   htop
   bitwarden
   bitwarden-cli
-  libreoffice-still-unwrapped
+  libreoffice-still
   blanket
   blender
   # for i3wm
