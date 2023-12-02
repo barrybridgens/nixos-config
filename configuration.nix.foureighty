@@ -133,6 +133,9 @@
   sbcl
   guile_3_0
   racket
+  cargo
+  rustc
+  rustfmt
   gnumake
   tmux
   meld
@@ -175,7 +178,7 @@
   #rofi
   ];
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     fira-code
   ];
 
