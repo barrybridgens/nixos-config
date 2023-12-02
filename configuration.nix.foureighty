@@ -57,6 +57,18 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  # Enable i3
+  #services.xserver.windowManager.i3.package = pkgs.i3-gaps;
+  #services.xserver.windowManager.i3.enable = true;
+  #services.xserver.desktopManager = {
+  #				  xterm.enable = false;
+  #				  xfce = {
+  #				       enable = true;
+  #				       noDesktop = true;
+  #  				       enableXfwm = false;
+  #				  };
+  #				 };
+
   # Configure keymap in X11
   services.xserver = {
     layout = "gb";
@@ -93,7 +105,7 @@
   users.users.barry = {
     isNormalUser = true;
     description = "Barry Bridgens";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "dialout"];
     packages = with pkgs; [
       firefox
       thunderbird
@@ -130,6 +142,8 @@
   obsidian
   gnomeExtensions.dash-to-dock
   gnomeExtensions.appindicator
+  gnomeExtensions.blur-my-shell
+  gnomeExtensions.vitals
   gnome3.gnome-tweaks
   git
   ranger
@@ -142,12 +156,23 @@
   alacritty
   kitty
   terminator
+  btop
   neofetch
   cmake
   thonny
   tailscale
   drawterm
   qemu_full
+  # for i3wm
+  #feh
+  #i3lock-fancy
+  #xss-lock
+  #xorg.xinput
+  #dunst
+  #polybar
+  #dex
+  #picom
+  #rofi
   ];
 
   fonts.fonts = with pkgs; [
