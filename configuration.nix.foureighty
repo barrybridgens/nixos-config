@@ -127,6 +127,8 @@
   emacs
   emacsPackages.vterm
   emacs-all-the-icons-fonts
+  silver-searcher
+  ripgrep
   ispell
   gcc12
   python3
