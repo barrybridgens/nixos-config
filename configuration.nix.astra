@@ -154,6 +154,14 @@ vim
   libreoffice-still
   blanket
   blender
+  shotwell
+  gimp
+  nufraw
+  rawtherapee
+  darktable
+  ardour
+  calf
+  lsp-plugins
   alacritty
   kitty
   terminator
@@ -164,6 +172,10 @@ vim
   tailscale
   drawterm
   qemu_full
+  ];
+
+  fonts.packages = with pkgs; [
+    fira-code
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
