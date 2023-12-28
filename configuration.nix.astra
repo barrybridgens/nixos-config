@@ -154,6 +154,7 @@ vim
   libreoffice-still
   blanket
   blender
+  inkscape-with-extensions
   shotwell
   gimp
   nufraw
@@ -162,6 +163,9 @@ vim
   ardour
   calf
   lsp-plugins
+  asunder
+  lame
+  rhythmbox
   alacritty
   kitty
   terminator
