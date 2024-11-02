@@ -4,6 +4,9 @@
 
 { config, pkgs, ... }:
 
+let
+  unstable = import <unstable> { config = config.nixpkgs.config; };
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -162,8 +165,8 @@
   meld
   vscode
   quickemu
-  dropbox
-  dropbox-cli
+  unstable.dropbox
+  unstable.dropbox-cli
   obsidian
   gnomeExtensions.dash-to-dock
   gnomeExtensions.appindicator
