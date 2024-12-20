@@ -69,11 +69,11 @@ in
   services.xserver.desktopManager.gnome.enable = true;
 
   # Enable Hyprland
-  #programs.hyprland = {
-  #  enable = true;
-  #  # nvidiaPatches = true;
-  #  xwayland.enable = true;
-  #};
+  programs.hyprland = {
+    enable = true;
+    # nvidiaPatches = true;
+    xwayland.enable = true;
+  };
 
   # Enable i3
   #services.xserver.windowManager.i3.package = pkgs.i3-gaps;
@@ -100,21 +100,21 @@ in
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
+  #sound.enable = true;
+  #hardware.pulseaudio.enable = false;
+  #security.rtkit.enable = true;
+  #services.pipewire = {
+  #  enable = true;
+  #  alsa.enable = true;
+  #  alsa.support32Bit = true;
+  #  pulse.enable = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
-  };
+  #};
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -161,6 +161,8 @@ in
   gforth
   gnumake
   jdk
+  clojure
+  leiningen
   tmux
   meld
   vscode
@@ -172,16 +174,18 @@ in
   gnomeExtensions.appindicator
   gnomeExtensions.blur-my-shell
   gnomeExtensions.vitals
-  gnome3.gnome-tweaks
+  gnome.gnome-tweaks
   git
+  transmission_4-gtk
   ranger
   htop
   bitwarden
   bitwarden-cli
   libreoffice-still
   inkscape-with-extensions
-  rtl-sdr
-  sdrpp
+  pan
+  #rtl-sdr
+  #sdrpp
   blanket
   blender
   openscad
@@ -196,14 +200,23 @@ in
   drawterm
   qemu_full
   qflipper
-  gnuradio
-  hackrf
-  gnuradioPackages.osmosdr
+  rpi-imager
+  #gnuradio
+  #hackrf
+  #gnuradioPackages.osmosdr
   chromium
   gotypist
+  basiliskii
+  dosbox
+  dosbox-x
   # for Hyprland
-  # waybar
-  # wofi
+  waybar
+  wofi
+  hyprlock
+  hypridle
+  hyprshot
+  hyprpaper
+  swaynotificationcenter
   # for i3wm
   #feh
   #i3lock-fancy
