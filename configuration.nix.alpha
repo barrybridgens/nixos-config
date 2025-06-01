@@ -133,6 +133,7 @@
   gnumake
   tmux
   meld
+  lazygit
   vscode
   dropbox
   dropbox-cli
