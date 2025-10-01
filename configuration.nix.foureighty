@@ -4,9 +4,6 @@
 
 { config, pkgs, ... }:
 
-let
-  unstable = import <unstable> { config = config.nixpkgs.config; };
-in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -146,6 +143,7 @@ in
   emacs
   emacsPackages.vterm
   emacs-all-the-icons-fonts
+  stow
   silver-searcher
   ripgrep
   fd
@@ -167,14 +165,14 @@ in
   meld
   vscode
   quickemu
-  unstable.dropbox
-  unstable.dropbox-cli
+  dropbox
+  dropbox-cli
   obsidian
   gnomeExtensions.dash-to-dock
   gnomeExtensions.appindicator
   gnomeExtensions.blur-my-shell
   gnomeExtensions.vitals
-  gnome.gnome-tweaks
+  gnome-tweaks
   git
   transmission_4-gtk
   ranger
