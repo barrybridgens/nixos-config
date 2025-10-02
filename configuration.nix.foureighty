@@ -8,6 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      # other includes
+      ./hyprland.nix
     ];
 
 
@@ -65,13 +67,6 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  # Enable Hyprland
-  programs.hyprland = {
-    enable = true;
-    # nvidiaPatches = true;
-    xwayland.enable = true;
-  };
-
   # Enable i3
   #services.xserver.windowManager.i3.package = pkgs.i3-gaps;
   #services.xserver.windowManager.i3.enable = true;
@@ -86,8 +81,8 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "gb";
-    xkbVariant = "";
+    xkb.layout = "gb";
+    xkb.variant = "";
   };
 
   # Configure console keymap
@@ -207,14 +202,6 @@
   basiliskii
   dosbox
   dosbox-x
-  # for Hyprland
-  waybar
-  wofi
-  hyprlock
-  hypridle
-  hyprshot
-  hyprpaper
-  swaynotificationcenter
   # for i3wm
   #feh
   #i3lock-fancy
