@@ -135,6 +135,7 @@
   #  wget
   vim
   neovim
+  lazygit
   emacs
   emacsPackages.vterm
   emacs-all-the-icons-fonts
@@ -143,7 +144,7 @@
   ripgrep
   fd
   ispell
-  gcc12
+  gcc14
   python3
   sbcl
   guile_3_0
@@ -172,7 +173,7 @@
   transmission_4-gtk
   ranger
   htop
-  bitwarden
+  bitwarden-desktop
   bitwarden-cli
   libreoffice-still
   inkscape-with-extensions
@@ -192,7 +193,7 @@
   tailscale
   drawterm
   qemu_full
-  qflipper
+  qFlipper
   rpi-imager
   #gnuradio
   #hackrf
@@ -243,6 +244,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 
 }
